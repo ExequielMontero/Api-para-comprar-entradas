@@ -1,0 +1,25 @@
+# Entornos y herramientas
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.backup
+
+# Binarios y dependencias
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+packages/
+
+# Logs y temporales
+*.log
+*.log.*
+*.tmp
+
+# Bases de datos y publicaciones
+*.mdf
+*.ldf
+Publish/
