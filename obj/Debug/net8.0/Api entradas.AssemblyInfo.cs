@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Api entradas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a2155b02b5ea4b61dba9213ccb6ee9f065dd2e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+416beff5be31739a969115df2233b6668b9f5635")]
 [assembly: System.Reflection.AssemblyProductAttribute("Api entradas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Api entradas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
