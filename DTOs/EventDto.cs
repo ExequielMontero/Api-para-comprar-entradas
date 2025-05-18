@@ -2,5 +2,6 @@
 {
     public class EventDto
     {
+        public string Title; public DateTime Date; public int TotalTickets;
     }
 }
