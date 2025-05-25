@@ -30,6 +30,9 @@ namespace Api_entradas.Controllers
         [HttpPost("{eventId}/purchase")]
         public async Task<IActionResult> Purchase(Guid eventId, [FromBody] PaymentDto dto)
         {
+
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var ev = await _db.Events.FindAsync(eventId);
             if (ev == null)
                 return NotFound();
@@ -100,7 +103,7 @@ namespace Api_entradas.Controllers
 
             // 5. Generar QR y enviar correo
             var qr = QRCoderHelper.GenerateQr($"{eventId}|{userId}|{DateTime.UtcNow}");
-            var user = await _db.Users.FindAsync(userId);
+            var user = await _db.User.FindAsync(userId);
             if (user == null) return NotFound("Usuario no encontrado.");
 
             await _email.SendEmailAsync(

@@ -16,13 +16,28 @@ namespace Api_entradas.Controllers
 
         [Authorize(Policy = "Organizer")]
         [HttpPost]
-        public async Task<IActionResult> Create(EventDto dto)
+        public async Task<IActionResult> Create([FromBody] EventDto dto, [FromForm] IFormFile banner)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            if (banner == null || banner.Length == 0)
+                return BadRequest("Debe adjuntarse un banner.");
+            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Banners");
+            var fileName = Guid.NewGuid() + Path.GetExtension(banner.FileName);
+            var savePath = Path.Combine(folderPath, fileName);
+
+            using (var stream = new FileStream(savePath, FileMode.Create))
+            {
+                await banner.CopyToAsync(stream);
+            }
+            var url = $"{Request.Scheme}://{Request.Host}/banners/{fileName}";
             var ev = new Event
             {
                 Title = dto.Title,
+                BannerEvento = url,
                 Date = dto.Date,
                 TotalTickets = dto.TotalTickets,
+                Price = dto.Price,
                 TicketsSold = 0
             };
             _db.Events.Add(ev);
@@ -41,7 +56,8 @@ namespace Api_entradas.Controllers
             return NoContent();
         }
 
-        [AllowAnonymous]
+        // [AllowAnonymous]
+        [Authorize(Policy = "Cliente")]
         [HttpGet]
         public async Task<IActionResult> GetAll(int page = 1, int pageSize = 10)
         {

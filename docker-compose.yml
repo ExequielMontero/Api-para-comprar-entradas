@@ -1,7 +1,0 @@
-﻿version: '3.8'
-services:
-  redis:
-    image: redis:latest
-    container_name: ticketapi-redis
-    ports:
-      - "6379:6379"

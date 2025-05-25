@@ -13,5 +13,9 @@ namespace Api_entradas.Models
         public string PasswordHash { get; set; } = null!;
         public UserRole Role { get; set; }
         public DateTime? FechaNacimiento { get; set; }
+        public bool EstaVerificado { get; set; } = false;
+
+        public ICollection<UserEvent> UserEvents { get; set; } = new List<UserEvent>();
+
     }
 }

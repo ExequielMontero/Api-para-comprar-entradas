@@ -3,118 +3,129 @@ using Api_entradas.Services;
 using MercadoPago.Config;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using SQLitePCL;
-using System;
-using System.IdentityModel.Tokens.Jwt;
+using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-
-
-Batteries.Init();
 var builder = WebApplication.CreateBuilder(args);
-MercadoPagoConfig.AccessToken = builder.Configuration["Mp:AccessToken"];
-// Add services to the container.
 
+// Configurar MercadoPago
+MercadoPagoConfig.AccessToken = builder.Configuration["Mp:AccessToken"];
+
+// Agregar servicios
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Configurar Swagger con JWT Bearer
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
+
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Ingrese el token JWT.",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
+    });
+});
 
 // EF Core – SQLite
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<AuthService>();
-builder.Services.AddScoped<IEmailService, EmailService>();
-
-
-/*Esto configura Redis como sistema de cache distribuido, usando la librería StackExchange.Redis.
--Se conecta a Redis en localhost:6379.
-Prefija las claves almacenadas con "TicketAPI:" (útil si compartís el Redis con otras apps).
-Puede ser usado para guardar tokens, sesiones, datos temporales, etc.*/
-
-builder.Services.AddStackExchangeRedisCache(o => {
-    o.Configuration = builder.Configuration["Redis:Configuration"];
-    o.InstanceName = builder.Configuration["Redis:InstanceName"];
+// Redis como IDistributedCache
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.ConfigurationOptions = new ConfigurationOptions
+    {
+        EndPoints = { { "redis-19939.c251.east-us-mz.azure.redns.redis-cloud.com", 19939 } },
+        User = "default",
+        Password = "YgjSOkn8SDeI3XJODnf83kxIj8cRYNBb"
+    };
+    options.InstanceName = "TicketAPI:";
 });
 
+// Servicios de la app
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<AuthService>();
 
-// Clave y parámetros JWT
-var jwtSecret = builder.Configuration["Jwt:Key"];
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-  .AddJwtBearer(options => {
-      options.TokenValidationParameters = new TokenValidationParameters
-      {
-          ValidateIssuerSigningKey = true,
-          IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret)),
-          ValidateIssuer = false,
-          ValidateAudience = false
-      };
-      options.Events = new JwtBearerEvents
-      {
-          OnTokenValidated = async ctx =>
-          {
-              var svc = ctx.HttpContext.RequestServices.GetRequiredService<AuthService>();
-              var sub = ctx.Principal.FindFirstValue(JwtRegisteredClaimNames.Sub);
+// Configuración JWT
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+var jwtKey = jwtSettings["Key"]!;
+var issuer = jwtSettings["Issuer"]!;
+var audience = jwtSettings["Audience"]!;
 
-              // Casteo seguro
-              if (ctx.SecurityToken is JwtSecurityToken jwtToken)
-              {
-                  var ok = await svc.ValidateCachedTokenAsync(Guid.Parse(sub), jwtToken.RawData);
-                  if (!ok)
-                      ctx.Fail("Token no válido o caducado.");
-              }
-              else
-              {
-                  ctx.Fail("Token no es un JWT válido.");
-              }
-          }
-      };
-  });
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+        ValidateIssuer = true,
+        ValidIssuer = issuer,
+        ValidateAudience = true,
+        ValidAudience = audience,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero,
+        RoleClaimType = ClaimTypes.Role
+    };
 
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = ctx =>
+        {
+            // Puedes loguear o verificar headers aquí
+            return Task.CompletedTask;
+        }
+    };
+});
 
-/*Define políticas de autorización basadas en roles.
-Ejemplo de uso en un controlador:
-[Authorize(Policy = "Admin")]
-[HttpPost("crear-evento")]*/
-builder.Services.AddAuthorization(options => {
-    options.AddPolicy("Client", p => p.RequireRole("Client"));
-    options.AddPolicy("Organizer", p => p.RequireRole("Organizer"));
+// Políticas de autorización
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Cliente", p => p.RequireRole("Cliente"));
+    options.AddPolicy("Organizador", p => p.RequireRole("Organizador"));
     options.AddPolicy("Admin", p => p.RequireRole("Admin"));
 });
 
-
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
-
-
-
 var app = builder.Build();
 
-// Automigrations (opcional)
-using (var scope = app.Services.CreateScope())
-{
-    AppDbContext context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    context.Database.Migrate();
-};
+// Pipeline
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi API v1"));
 
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 

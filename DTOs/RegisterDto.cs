@@ -21,10 +21,5 @@ namespace Api_entradas.DTOs
         [Required(ErrorMessage = "La fecha de nacimiento es obligatoria.")]
         [DataType(DataType.Date)]
         public DateTime FechaNacimiento { get; set; }
-
-
-        [Required(ErrorMessage = "El rol es obligatorio.")]
-        [EnumDataType(typeof(UserRole), ErrorMessage = "El rol debe ser Client, Organizer o Admin.")]
-        public UserRole Role { get; set; }
     }
 }
