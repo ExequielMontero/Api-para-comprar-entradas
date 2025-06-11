@@ -8,13 +8,10 @@
 ## Índice
 
 - [Descripción general](#descripción-general)  
-- [Tecnologías usadas](#tecnologías-usadas)  
-- [Estado actual y funcionalidades](#estado-actual-y-funcionalidades)  
-- [Funcionalidades en desarrollo](#funcionalidades-en-desarrollo)  
+- [Tecnologías usadas por el momento](#tecnologías-usadas-por-el-momento)  
+- [Funcionalidades implementadas y en desarrollo](#funcionalidades-implementadas-y-utilizables)  
 - [Arquitectura y diseño artesanal](#arquitectura-y-diseño-artesanal)  
 - [Instrucciones para clonar y correr](#instrucciones-para-clonar-y-correr)  
-- [Roadmap y próximos pasos](#roadmap-y-próximos-pasos)  
-- [Contribuciones](#contribuciones)  
 - [Contacto y notas personales](#contacto-y-notas-personales)
 
 ---
