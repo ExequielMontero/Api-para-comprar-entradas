@@ -9,19 +9,22 @@ using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 using System.Security.Claims;
 using System.Text;
-
+using System.Security.Cryptography;
+using System.Reflection;
+using Swashbuckle.AspNetCore.Filters;
+using Microsoft.Extensions.Caching.Distributed;
+using System.IdentityModel.Tokens.Jwt;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurar MercadoPago
 MercadoPagoConfig.AccessToken = builder.Configuration["Mp:AccessToken"];
 
-// Agregar servicios
-builder.Services.AddControllers();
-
 // Configurar Swagger con JWT Bearer
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
+    options.ExampleFilters();
+
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -48,23 +51,34 @@ builder.Services.AddSwaggerGen(options =>
             new string[] { }
         }
     });
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
 });
+
+//registrar ejemplos
+builder.Services.AddSwaggerExamplesFromAssemblyOf<PatchUserRequestExample>();
+
+//Json
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(); // Si usas Program.cs
+
 
 // EF Core – SQLite
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Redis como IDistributedCache
-builder.Services.AddStackExchangeRedisCache(options =>
-{
-    options.ConfigurationOptions = new ConfigurationOptions
-    {
-        EndPoints = { { "redis-19939.c251.east-us-mz.azure.redns.redis-cloud.com", 19939 } },
-        User = "default",
-        Password = "YgjSOkn8SDeI3XJODnf83kxIj8cRYNBb"
-    };
-    options.InstanceName = "TicketAPI:";
-});
+builder.Services.AddSingleton<IConnectionMultiplexer>(
+    ConnectionMultiplexer.Connect(
+        new ConfigurationOptions
+        {
+            EndPoints = { "redis-19939.c251.east-us-mz.azure.redns.redis-cloud.com:19939" },
+            User = "default",
+            Password = "YgjSOkn8SDeI3XJODnf83kxIj8cRYNBb"
+        }
+    )
+);
 
 // Servicios de la app
 builder.Services.AddScoped<IEmailService, EmailService>();
@@ -100,11 +114,24 @@ builder.Services.AddAuthentication(options =>
 
     options.Events = new JwtBearerEvents
     {
-        OnMessageReceived = ctx =>
+        OnTokenValidated = async ctx =>
         {
-            // Puedes loguear o verificar headers aquí
-            return Task.CompletedTask;
+            var redisDb = ctx.HttpContext.RequestServices
+                .GetRequiredService<IConnectionMultiplexer>()
+                .GetDatabase();
+
+            var token = ctx.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            var key = $"invalid:{token}";
+            var isInvalid = await redisDb.StringGetAsync(key);
+
+            Console.WriteLine($"[DEBUG] Revisando clave: {key} - Valor: {isInvalid}");
+
+            if (!isInvalid.IsNullOrEmpty)
+            {
+                ctx.Fail("Token inválido (en blacklist)");
+            }
         }
+
     };
 });
 
@@ -117,6 +144,16 @@ builder.Services.AddAuthorization(options =>
 });
 
 var app = builder.Build();
+
+
+
+app.MapGet("/hashpassword/{password}", async (string password) =>
+{
+    using var sha = SHA256.Create();
+    var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+    return Convert.ToBase64String(bytes);
+
+});
 
 // Pipeline
 app.UseSwagger();

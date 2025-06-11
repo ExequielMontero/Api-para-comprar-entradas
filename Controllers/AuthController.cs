@@ -15,6 +15,9 @@ namespace Api_entradas.Controllers
 
 
 
+        /// <summary>
+        /// Endpoint para ver los tipos de roles en la app
+        /// </summary>
         [HttpGet("roles")]
         public IActionResult GetRoles()
         {
@@ -23,7 +26,9 @@ namespace Api_entradas.Controllers
 
         // Otros endpoints (login, registro, etc.)
 
-
+        /// <summary>
+        /// Endpoint para Registrar una cuenta. Rol por defecto 0(Cliente).
+        /// </summary>
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto dto)
         {
@@ -34,7 +39,7 @@ namespace Api_entradas.Controllers
                 return CreatedAtAction(
                 actionName: "GetUserById",
                 controllerName: "User",
-                routeValues: new { id = user.Id },
+                routeValues: new { user = user.Usuario},
                 value: new { user.Id, user.Email });
             }
             catch (Exception ex)
@@ -42,7 +47,9 @@ namespace Api_entradas.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
-
+        /// <summary>
+        /// Endpoint para loguearse si antes ya te hiciste tu cuenta.
+        /// </summary>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {

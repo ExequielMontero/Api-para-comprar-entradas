@@ -19,7 +19,7 @@ namespace Api_entradas.Models
 
         [Required(ErrorMessage = "La fecha de compra es obligatoria.")]
         [DataType(DataType.DateTime)]
-        [PurchaseDateValidation(ErrorMessage = "La fecha de compra no puede ser futura.")]
+        [DateValidation(ErrorMessage = "La fecha de compra no puede ser futura.")]
         public DateTime PurchaseDate { get; set; }
 
         [Required(ErrorMessage = "La cantidad de tickets comprados es obligatoria.")]

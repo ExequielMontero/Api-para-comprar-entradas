@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Api_entradas.Enums;
-
+using Api_entradas.Atributes;
 namespace Api_entradas.DTOs
 {
     public class RegisterDto
@@ -19,7 +19,7 @@ namespace Api_entradas.DTOs
         public string Password { get; set; } = null!;
 
         [Required(ErrorMessage = "La fecha de nacimiento es obligatoria.")]
-        [DataType(DataType.Date)]
+        [DateValidation(ErrorMessage = "La fecha debe tener el formato yyyy-mm-d y debe ser pasada")]
         public DateTime FechaNacimiento { get; set; }
     }
 }

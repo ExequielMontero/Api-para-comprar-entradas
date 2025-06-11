@@ -9,20 +9,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.IdentityModel.Tokens;
+using StackExchange.Redis;
 using static QRCoder.PayloadGenerator;
 
 namespace Api_entradas.Services
 {
     public class AuthService
     {
-        private readonly IDistributedCache _cache;
+        private readonly IDatabase _redisDb;
         private readonly IConfiguration _cfg;
         private readonly IEmailService _email;
         private readonly AppDbContext _db;
 
-        public AuthService(IDistributedCache cache, IConfiguration cfg, AppDbContext db, IEmailService email)
+        public AuthService(IConnectionMultiplexer mux, IConfiguration cfg, AppDbContext db, IEmailService email)
         {
-            _cache = cache;
+            _redisDb = mux.GetDatabase();
             _cfg = cfg;
             _email = email;
             _db = db;
@@ -94,26 +95,31 @@ namespace Api_entradas.Services
             );
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 
-            var existingValue = await _cache.GetStringAsync($"token:{user.Id}");
-            if (existingValue != null)
-            {
-                await _cache.RemoveAsync($"token:{user.Id}");
-            }
-            await _cache.SetStringAsync($"token:{user.Id}", jwt, new DistributedCacheEntryOptions
-            {
-                AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(60)
-            });
+            var oldToken = await _redisDb.StringGetAsync($"token:{user.Id}");
+            Console.WriteLine($"[DEBUG] Valor en Redis para invalid: {oldToken}");
 
+            if (!string.IsNullOrEmpty(oldToken))
+            {
+                await _redisDb.StringSetAsync($"invalid:{oldToken}", "true", TimeSpan.FromMinutes(60));
+                await _redisDb.KeyDeleteAsync($"token:{user.Id}");
+            }
+
+            await _redisDb.StringSetAsync($"token:{user.Id}", jwt, TimeSpan.FromMinutes(60));
 
             return jwt;
         }
 
-        // 5. Validar token contra Redis
-        public async Task<bool> ValidateCachedTokenAsync(Guid userId, string token)
-        {
-            var cached = await _cache.GetStringAsync($"token:{userId}");
-            return cached == token;
-        }
+        //// 5. Validar token contra Redis
+        //public async Task<bool> ValidateCachedTokenAsync(Guid userId, string token)
+        //{
+        //    // Verifica si el token está en la lista negra
+        //    var invalid = await _cache.GetStringAsync($"invalid:{token}");
+        //    Console.WriteLine($"[DEBUG] Valor en Redis para invalid: {invalid}");
+        //    if (invalid != null) return false;
+        //    var cached = await _cache.GetStringAsync($"token:{userId}");
+        //    Console.WriteLine($"[DEBUG] Valor en Redis para invalid: {cached}");
+        //    return cached == token;
+        //}
     }
 
 }
