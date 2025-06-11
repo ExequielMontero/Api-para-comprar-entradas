@@ -9,7 +9,7 @@
 
 - [Descripción general](#descripción-general)  
 - [Tecnologías usadas por el momento](#tecnologías-usadas-por-el-momento)  
-- [Funcionalidades implementadas y en desarrollo](#✅-funcionalidades-implementadas-y-en-desarrollo)  
+- [Funcionalidades implementadas y en desarrollo](#funcionalidades-implementadas-y-en-desarrollo)  
 - [Arquitectura y diseño artesanal](#arquitectura-y-diseño-artesanal)  
 - [Instrucciones para clonar y correr](#instrucciones-para-clonar-y-correr)  
 
@@ -40,14 +40,14 @@ Esta API RESTful está pensada para gestionar la venta de entradas para eventos.
 
 ---
 
-### ✅ Funcionalidades implementadas y en desarrollo
+## Funcionalidades implementadas y en desarrollo
 
-## AuthController(endpoints)
+## AuthController(endpoints) ✅ 
 - **Registro de usuario**: El registro funciona perfectamente y hashea la contraseña antes de insertarla en la db.  
 - **Login con JWT**: Creación manual de token JWT y guardado en Redis para validar sesión única y que no se puedan crear muchos JWT y que que se puedan utilizar si no expiraron aún.  
 - **Roles de usuario**: Manejo de roles (Admin, Cliente, Organizador).    
 
-## AuthController(endpoints)
+## AuthController(endpoints) ✅ 
 - **Lista obtener todos los usuarios**: Sólo Admin puede listar todos los usuarios.
 - **Lista obtener usuarios por id**: Sólo Admin puede listar usuario por id.  
 - **Actualizar usuario**: Cualquier usuario logueado puede actualizar cualquiera de sus datos exceptuando el rol. **Importante en el body quitar el atributo que no van a actualizar**.
