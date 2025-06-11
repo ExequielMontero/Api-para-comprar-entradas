@@ -9,7 +9,7 @@
 
 - [Descripción general](#descripción-general)  
 - [Tecnologías usadas por el momento](#tecnologías-usadas-por-el-momento)  
-- [Funcionalidades implementadas y en desarrollo](#funcionalidades-implementadas-y-en-desarrollo)  
+- [Funcionalidades implementadas y en desarrollo](#✅-funcionalidades-implementadas-y-en-desarrollo)  
 - [Arquitectura y diseño artesanal](#arquitectura-y-diseño-artesanal)  
 - [Instrucciones para clonar y correr](#instrucciones-para-clonar-y-correr)  
 
@@ -40,7 +40,7 @@ Esta API RESTful está pensada para gestionar la venta de entradas para eventos.
 
 ---
 
-## ✅ Funcionalidades implementadas y en desarrollo
+### ✅ Funcionalidades implementadas y en desarrollo
 
 ## AuthController(endpoints)
 - **Registro de usuario**: El registro funciona perfectamente y hashea la contraseña antes de insertarla en la db.  
