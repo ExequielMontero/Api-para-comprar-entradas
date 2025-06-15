@@ -57,7 +57,7 @@ namespace Api_entradas.Controllers
         {
             try
             {
-                var usuario = await _context.User.FirstAsync(x => x.Usuario == user);
+                var usuario = await _context.User.FirstAsync(x => x.User == user);
                 if (usuario == null) return NotFound(new { mensaje = "Usuario no encontrado" });
                 return Ok(usuario);
             }
@@ -81,14 +81,14 @@ namespace Api_entradas.Controllers
             if (patchDoc == null)
                 return BadRequest();
 
-            var user = await _context.User.FirstOrDefaultAsync(x => x.Usuario == usuario);
+            var user = await _context.User.FirstOrDefaultAsync(x => x.User == usuario);
             if (user == null)
                 return NotFound(new { mensaje = "Usuario no encontrado" });
 
             // Mapea el usuario actual a un DTO
             var userDto = new UpdateUserDto
             {
-                Usuario = user.Usuario,
+                Usuario = user.User,
                 Email = user.Email,
                 FechaNacimiento = user.FechaNacimiento
             };
@@ -100,12 +100,12 @@ namespace Api_entradas.Controllers
                 return BadRequest(ModelState);
 
             // Validar cambio de nombre de usuario
-            if (!string.IsNullOrWhiteSpace(userDto.Usuario) && !string.Equals(user.Usuario, userDto.Usuario, StringComparison.OrdinalIgnoreCase))
+            if (!string.IsNullOrWhiteSpace(userDto.Usuario) && !string.Equals(user.User, userDto.Usuario, StringComparison.OrdinalIgnoreCase))
             {
-                var existe = await _context.User.AnyAsync(x => x.Usuario == userDto.Usuario && x.Id != user.Id);
+                var existe = await _context.User.AnyAsync(x => x.User == userDto.Usuario && x.Id != user.Id);
                 if (existe)
                     return BadRequest(new { mensaje = "Ese nombre de usuario ya existe" });
-                user.Usuario = userDto.Usuario;
+                user.User = userDto.Usuario;
             }
 
             // Validar cambio de email
@@ -134,7 +134,7 @@ namespace Api_entradas.Controllers
             if (string.IsNullOrEmpty(usuario))
                 return BadRequest(new { mensaje = "Es requerido si o si el usuario" });
 
-            var user = await _context.User.FirstOrDefaultAsync(x => x.Usuario == usuario);
+            var user = await _context.User.FirstOrDefaultAsync(x => x.User == usuario);
             if (user == null)
                 return NotFound(new { mensaje = "Usuario no encontrado" });
 
@@ -160,7 +160,7 @@ namespace Api_entradas.Controllers
                 if (string.IsNullOrEmpty(usuario))
                     return BadRequest(new { mensaje = "Es requerido si o si el usuario" });
 
-                var user = await _context.User.FirstOrDefaultAsync(x => x.Usuario == usuario);
+                var user = await _context.User.FirstOrDefaultAsync(x => x.User == usuario);
                 if (user == null)
                     return NotFound(new { mensaje = "Usuario no encontrado" });
 

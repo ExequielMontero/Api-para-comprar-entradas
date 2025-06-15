@@ -3,19 +3,22 @@ using Api_entradas.Atributes;
 
 namespace Api_entradas.Models
 {
-    public class UserEvent
+    public class Venta
     {
+        [Key]
+        [Required]
+        public int Id { get; set; } 
         [Required]
         public Guid UserId { get; set; }
 
         [Required]
-        public User User { get; set; } = null!;
+        public Usuario User { get; set; } = null!;
 
         [Required]
         public Guid EventId { get; set; }
 
         [Required]
-        public Event Event { get; set; } = null!;
+        public Evento Event { get; set; } = null!;
 
         [Required(ErrorMessage = "La fecha de compra es obligatoria.")]
         [DataType(DataType.DateTime)]

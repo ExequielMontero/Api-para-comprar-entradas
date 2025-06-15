@@ -12,30 +12,30 @@ namespace Api_entradas.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<UserEvent>()
+            modelBuilder.Entity<Venta>()
                 .HasKey(ue => new { ue.UserId, ue.EventId });
 
-            modelBuilder.Entity<UserEvent>()
+            modelBuilder.Entity<Venta>()
                 .HasOne(ue => ue.User)
                 .WithMany(u => u.UserEvents)
                 .HasForeignKey(ue => ue.UserId);
 
-            modelBuilder.Entity<UserEvent>()
+            modelBuilder.Entity<Venta>()
                 .HasOne(ue => ue.Event)
                 .WithMany(e => e.UserEvents)
                 .HasForeignKey(ue => ue.EventId);
 
-            modelBuilder.Entity<User>()
-            .HasIndex(u => u.Usuario)
+            modelBuilder.Entity<Usuario>()
+            .HasIndex(u => u.User)
              .IsUnique();
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<Usuario>()
           .HasIndex(u => u.Email)
            .IsUnique();
         }
 
-        public DbSet<User> User { get; set; }
-        public DbSet<Event> Events { get; set; }
-        public DbSet<UserEvent> UserEvent { get; set; }
+        public DbSet<Usuario> User { get; set; }
+        public DbSet<Evento> Events { get; set; }
+        public DbSet<Venta> UserEvent { get; set; }
     }
 }

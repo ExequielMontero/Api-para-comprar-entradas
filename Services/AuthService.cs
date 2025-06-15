@@ -39,21 +39,21 @@ namespace Api_entradas.Services
 
         // 2. Registrar un nuevo usuario (rol Client por defecto)
         //dto.User,dto.Email, dto.Password,dto.FechaNacimiento,dto.Role
-        public async Task<User> RegisterAsync(string usu, string email, string password, DateTime fechanacimiento)
+        public async Task<Usuario> RegisterAsync(string usu, string email, string password, DateTime fechanacimiento)
         {
             if (_db.User.Any(u => u.Email == email))
             {
                 throw new Exception("El email ya está registrado.");
             }
-            else if (_db.User.Any(u => u.Usuario == usu))
+            else if (_db.User.Any(u => u.User == usu))
             {
                 throw new Exception("El usuario ya está registrado.");
             }
 
             var hash = HashPassword(password);
-            var usuario = new User
+            var usuario = new Usuario
             {
-                Usuario = usu,
+                User = usu,
                 Email = email,
                 PasswordHash = hash,
                 FechaNacimiento = fechanacimiento,
@@ -67,7 +67,7 @@ namespace Api_entradas.Services
         }
 
         // 3. Validar credenciales y devolver User o null
-        public async Task<User?> ValidateUserAsync(string email, string password)
+        public async Task<Usuario?> ValidateUserAsync(string email, string password)
         {
             var hash = HashPassword(password);
             return await _db.User
@@ -75,13 +75,13 @@ namespace Api_entradas.Services
         }
 
         // 4. Generar JWT y cachear
-        public async Task<string> GenerateTokenAsync(User user)
+        public async Task<string> GenerateTokenAsync(Usuario user)
         {
             var jwtKey = _cfg["Jwt:Key"];
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
                 new Claim(ClaimTypes.Email,user.Email),
-                new Claim(JwtRegisteredClaimNames.UniqueName, user.Usuario),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.User),
                 new Claim(ClaimTypes.Role, user.Role.ToString())};
             var key = Encoding.UTF8.GetBytes(jwtKey!);
             var creds = new SigningCredentials(new SymmetricSecurityKey(key),

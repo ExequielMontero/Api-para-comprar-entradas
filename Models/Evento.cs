@@ -3,7 +3,7 @@ using Api_entradas.Atributes;
 
 namespace Api_entradas.Models
 {
-    public class Event
+    public class Evento
     {
         [Key]
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -29,7 +29,7 @@ namespace Api_entradas.Models
         public int TicketsSold { get; set; }
 
 
-        public ICollection<UserEvent> UserEvents { get; set; } = new List<UserEvent>();
+        public ICollection<Venta> UserEvents { get; set; } = new List<Venta>();
 
     }
 

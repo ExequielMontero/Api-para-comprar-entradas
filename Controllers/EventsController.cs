@@ -31,7 +31,7 @@ namespace Api_entradas.Controllers
                 await banner.CopyToAsync(stream);
             }
             var url = $"{Request.Scheme}://{Request.Host}/banners/{fileName}";
-            var ev = new Event
+            var ev = new Evento
             {
                 Title = dto.Title,
                 BannerEvento = url,

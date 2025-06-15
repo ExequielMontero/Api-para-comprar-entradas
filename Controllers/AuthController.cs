@@ -39,7 +39,7 @@ namespace Api_entradas.Controllers
                 return CreatedAtAction(
                 actionName: "GetUserById",
                 controllerName: "User",
-                routeValues: new { user = user.Usuario},
+                routeValues: new { user = user.User},
                 value: new { user.Id, user.Email });
             }
             catch (Exception ex)
