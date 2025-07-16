@@ -32,9 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
     <Folder Include="Middlewares\" />
-    <Folder Include="Banners\" />
   </ItemGroup>
 
 </Project>

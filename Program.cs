@@ -174,6 +174,13 @@ app.MapGet("/hashpassword/{password}", async (string password) =>
 
 });
 
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/swagger");
+    return Task.CompletedTask;
+});
+
+
 // Pipeline
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi API v1"));
