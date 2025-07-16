@@ -70,7 +70,6 @@ namespace Api_entradas.Controllers
         }
 
         // [AllowAnonymous]
-        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll(int page = 1, int pageSize = 10)
         {
@@ -84,7 +83,8 @@ namespace Api_entradas.Controllers
                     e.Date,
                     e.TotalTickets,
                     e.TicketsSold,
-                    IsSoldOut = e.TicketsSold >= e.TotalTickets
+                    IsSoldOut = e.TicketsSold >= e.TotalTickets,
+                    e.BannerEvento
                 })
                 .ToListAsync();
 
