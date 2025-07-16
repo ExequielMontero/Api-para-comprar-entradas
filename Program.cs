@@ -166,14 +166,6 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "Banners")),
-    RequestPath = "/banners"
-});
-
-
 app.MapGet("/hashpassword/{password}", async (string password) =>
 {
     using var sha = SHA256.Create();
