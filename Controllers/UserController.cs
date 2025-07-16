@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.JsonPatch.Operations;
 using Swashbuckle.AspNetCore.Filters;
+using Microsoft.AspNetCore.Identity.Data;
 namespace Api_entradas.Controllers
 {
     /// <summary>

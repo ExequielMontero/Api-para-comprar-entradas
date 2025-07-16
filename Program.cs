@@ -14,6 +14,7 @@ using System.Reflection;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.Extensions.Caching.Distributed;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.FileProviders;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configurar MercadoPago
@@ -73,9 +74,9 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(
     ConnectionMultiplexer.Connect(
         new ConfigurationOptions
         {
-            EndPoints = { "redis-19939.c251.east-us-mz.azure.redns.redis-cloud.com:19939" },
+            EndPoints = { "redis-12962.c93.us-east-1-3.ec2.redns.redis-cloud.com:12962" },
             User = "default",
-            Password = "YgjSOkn8SDeI3XJODnf83kxIj8cRYNBb"
+            Password = "sC3qJHIwEp78By47uZ1dK07KGMXPOSK3"
         }
     )
 );
@@ -145,6 +146,12 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Banners")),
+    RequestPath = "/banners"
+});
 
 
 app.MapGet("/hashpassword/{password}", async (string password) =>

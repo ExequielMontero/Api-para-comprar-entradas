@@ -30,7 +30,7 @@ namespace Api_entradas.Services
         }
 
         //Metodo para hashear contraseña
-        private string HashPassword(string password)
+        public string HashPassword(string password)
         {
             using var sha = SHA256.Create();
             var bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));

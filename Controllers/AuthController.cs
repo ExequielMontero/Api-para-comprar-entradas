@@ -1,6 +1,11 @@
-﻿using Api_entradas.DTOs;
+﻿using Api_entradas.Data;
+using Api_entradas.DTOs;
 using Api_entradas.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 
 namespace Api_entradas.Controllers
 {
@@ -9,9 +14,13 @@ namespace Api_entradas.Controllers
     public class AuthController : ControllerBase
     {
         private readonly AuthService _auth;
+        private readonly AppDbContext _context;
+        public AuthController(AuthService authService, AppDbContext db)
+        {
+         _auth = authService;
+          _context = db;
 
-        public AuthController(AuthService authService)
-            => _auth = authService;
+        }
 
 
 
@@ -60,6 +69,24 @@ namespace Api_entradas.Controllers
 
             var token = await _auth.GenerateTokenAsync(user);
             return Ok(new { token });
+        }
+
+
+
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequestDto request)
+        {
+            var user = await _context.User.FirstOrDefaultAsync(u => u.User == request.User);
+            if (user == null)
+                return NotFound("Usuario no encontrado");
+
+            var nuevoHash = _auth.HashPassword(request.Password);
+            user.PasswordHash = nuevoHash;
+
+            _context.SaveChanges();
+
+            return Ok("Contraseña restablecida correctamente");
         }
     }
 }

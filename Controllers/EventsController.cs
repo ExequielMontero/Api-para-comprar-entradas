@@ -14,23 +14,28 @@ namespace Api_entradas.Controllers
         private readonly AppDbContext _db;
         public EventsController(AppDbContext db) => _db = db;
 
-        [Authorize(Policy = "Organizer")]
+
+
+        [Authorize(Policy = "Organizador")]
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] EventDto dto, [FromForm] IFormFile banner)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Create([FromForm] CreateEventWithBannerDto dto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (banner == null || banner.Length == 0)
-                return BadRequest("Debe adjuntarse un banner.");
             var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Banners");
-            var fileName = Guid.NewGuid() + Path.GetExtension(banner.FileName);
+            Directory.CreateDirectory(folderPath);
+
+            var fileName = Guid.NewGuid() + Path.GetExtension(dto.Banner.FileName);
             var savePath = Path.Combine(folderPath, fileName);
 
             using (var stream = new FileStream(savePath, FileMode.Create))
             {
-                await banner.CopyToAsync(stream);
+                await dto.Banner.CopyToAsync(stream);
             }
+
             var url = $"{Request.Scheme}://{Request.Host}/banners/{fileName}";
+
             var ev = new Evento
             {
                 Title = dto.Title,
@@ -40,12 +45,16 @@ namespace Api_entradas.Controllers
                 Price = dto.Price,
                 TicketsSold = 0
             };
+
             _db.Events.Add(ev);
             await _db.SaveChangesAsync();
+
             return CreatedAtAction(null, new { ev.Id }, ev);
         }
 
-        [Authorize(Policy = "Organizer")]
+
+
+        [Authorize(Policy = "Organizador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -57,7 +66,7 @@ namespace Api_entradas.Controllers
         }
 
         // [AllowAnonymous]
-        [Authorize(Policy = "Cliente")]
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAll(int page = 1, int pageSize = 10)
         {
