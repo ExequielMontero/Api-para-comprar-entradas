@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GqXiDm+WMHw=",
+  "dgSpecHash": "RYz52Cz85zk=",
   "success": true,
   "projectFilePath": "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\exeee\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
+    "C:\\Users\\exeee\\.nuget\\packages\\cloudinarydotnet\\1.12.0\\cloudinarydotnet.1.12.0.nupkg.sha512",
     "C:\\Users\\exeee\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\exeee\\.nuget\\packages\\mailkit\\4.12.1\\mailkit.4.12.1.nupkg.sha512",
     "C:\\Users\\exeee\\.nuget\\packages\\mercadopago-sdk\\2.5.0\\mercadopago-sdk.2.5.0.nupkg.sha512",

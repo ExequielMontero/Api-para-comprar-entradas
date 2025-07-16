@@ -1,6 +1,7 @@
 ﻿using Api_entradas.Data;
 using Api_entradas.DTOs;
 using Api_entradas.Models;
+using Api_entradas.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +13,13 @@ namespace Api_entradas.Controllers
     public class EventsController : ControllerBase
     {
         private readonly AppDbContext _db;
-        public EventsController(AppDbContext db) => _db = db;
 
+        private readonly CloudinaryService _cloudinaryService;
+        public EventsController(AppDbContext db, CloudinaryService cloudinary)
+        {
+            _db = db;
+            _cloudinaryService = cloudinary;
+        }
 
 
         [Authorize(Policy = "Organizador")]
@@ -23,18 +29,15 @@ namespace Api_entradas.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Banners");
-            Directory.CreateDirectory(folderPath);
-
-            var fileName = Guid.NewGuid() + Path.GetExtension(dto.Banner.FileName);
-            var savePath = Path.Combine(folderPath, fileName);
-
-            using (var stream = new FileStream(savePath, FileMode.Create))
+            string url;
+            try
             {
-                await dto.Banner.CopyToAsync(stream);
+                url = await _cloudinaryService.UploadImageAsync(dto.Banner);
             }
-
-            var url = $"{Request.Scheme}://{Request.Host}/banners/{fileName}";
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al subir imagen: {ex.Message}");
+            }
 
             var ev = new Evento
             {
@@ -51,6 +54,7 @@ namespace Api_entradas.Controllers
 
             return CreatedAtAction(null, new { ev.Id }, ev);
         }
+
 
 
 

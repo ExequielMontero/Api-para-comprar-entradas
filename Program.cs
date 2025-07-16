@@ -15,8 +15,28 @@ using Swashbuckle.AspNetCore.Filters;
 using Microsoft.Extensions.Caching.Distributed;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.FileProviders;
+using Api_entradas.Utils;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+
+// Cloudinary
+
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("Cloudinary"));
+builder.Services.AddSingleton<CloudinaryService>(sp =>
+{
+    var options = sp.GetRequiredService<IOptions<CloudinarySettings>>();
+    var settings = options.Value;
+
+    // TEMPORAL: imprime valores para verificar
+    Console.WriteLine("CLOUDINARY CONFIG:");
+    Console.WriteLine($"CloudName: {settings.CloudName}, ApiKey: {settings.ApiKey}, ApiSecret: {settings.ApiSecret}");
+
+    return new CloudinaryService(settings);
+});
 // Configurar MercadoPago
 MercadoPagoConfig.AccessToken = builder.Configuration["Mp:AccessToken"];
 
