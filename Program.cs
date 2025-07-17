@@ -185,6 +185,13 @@ app.MapGet("/", context =>
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Mi API v1"));
 
+app.UseCors(builder =>
+    builder
+        .WithOrigins("http://localhost:5173") // o el dominio de tu frontend
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+);
+app.UseCors();
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 
