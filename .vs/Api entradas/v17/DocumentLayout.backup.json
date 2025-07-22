@@ -1,130 +1,102 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\exeee\\Desktop\\api\\",
+  "WorkspaceRootPath": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453B365F-52AC-44C0-9AE6-503383CFE474}|Elementos de la soluci\u00F3n{453B365F-52AC-44C0-9AE6-503383CFE474}|C:\\Users\\exeee\\Desktop\\api\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{453B365F-52AC-44C0-9AE6-503383CFE474}|Elementos de la soluci\u00F3n{453B365F-52AC-44C0-9AE6-503383CFE474}|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\swaggerexamples\\patchuserrequestexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:swaggerexamples\\patchuserrequestexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:services\\cloudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\createeventwithbannerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\createeventwithbannerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\atributes\\datevalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:atributes\\datevalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\utils\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:utils\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\api entradas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:api entradas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\atributes\\futuredateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:atributes\\futuredateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\resetpasswordrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\resetpasswordrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\resetpasswordrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\mpnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\mpnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\createeventwithbannerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\createeventwithbannerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\eventdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\atributes\\valoresnumericosattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:atributes\\valoresnumericosattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\desktop\\api\\dtos\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:dtos\\updateroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\atributes\\futuredateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:atributes\\futuredateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|c:\\users\\exeee\\onedrive\\escritorio\\api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D7A5A77-5BE0-4ACC-B395-4ACC1E8BC405}|Api entradas.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Utils\\DateOnlyJsonConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Utils\\DateOnlyJsonConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,410 +106,296 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 30,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PatchUserRequestExample.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\SwaggerExamples\\PatchUserRequestExample.cs",
-              "RelativeDocumentMoniker": "SwaggerExamples\\PatchUserRequestExample.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\SwaggerExamples\\PatchUserRequestExample.cs",
-              "RelativeToolTip": "SwaggerExamples\\PatchUserRequestExample.cs",
+              "DocumentIndex": 7,
+              "Title": "UpdateRoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\UpdateRoleDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UpdateRoleDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\UpdateRoleDto.cs",
+              "RelativeToolTip": "DTOs\\UpdateRoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:56:00.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CloudinarySettings.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Utils\\CloudinarySettings.cs",
-              "RelativeDocumentMoniker": "Utils\\CloudinarySettings.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Utils\\CloudinarySettings.cs",
-              "RelativeToolTip": "Utils\\CloudinarySettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:21:48.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Services\\EmailService.cs",
-              "RelativeToolTip": "Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:08:18.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:18:26.41Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CloudinaryService.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Services\\CloudinaryService.cs",
-              "RelativeDocumentMoniker": "Services\\CloudinaryService.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Services\\CloudinaryService.cs",
-              "RelativeToolTip": "Services\\CloudinaryService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:04:12.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": ".dockerignore",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\.dockerignore",
-              "RelativeDocumentMoniker": ".dockerignore",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\.dockerignore",
-              "RelativeToolTip": ".dockerignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-16T20:29:07.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-07-16T20:26:40.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FutureDateAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\FutureDateAttribute.cs",
-              "RelativeDocumentMoniker": "Atributes\\FutureDateAttribute.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\FutureDateAttribute.cs",
-              "RelativeToolTip": "Atributes\\FutureDateAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T03:33:42.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DateValidation.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\DateValidation.cs",
-              "RelativeDocumentMoniker": "Atributes\\DateValidation.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\DateValidation.cs",
-              "RelativeToolTip": "Atributes\\DateValidation.cs",
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "DTOs\\RegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T03:12:34.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:18:20.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\RegisterDto.cs",
-              "RelativeToolTip": "DTOs\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "PaymentDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\PaymentDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\PaymentDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\PaymentDto.cs",
+              "RelativeToolTip": "DTOs\\PaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T03:08:46.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:18:17.794Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 11,
+              "Title": "PageResult.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\PageResult.cs",
+              "RelativeDocumentMoniker": "DTOs\\PageResult.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\PageResult.cs",
+              "RelativeToolTip": "DTOs\\PageResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T17:18:16.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MpNotificationDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\MpNotificationDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\MpNotificationDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\MpNotificationDto.cs",
+              "RelativeToolTip": "DTOs\\MpNotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T17:18:15.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\LoginDto.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\LoginDto.cs",
               "RelativeToolTip": "DTOs\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T03:08:45.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ResetPasswordRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\ResetPasswordRequestDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\ResetPasswordRequestDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\ResetPasswordRequestDto.cs",
-              "RelativeToolTip": "DTOs\\ResetPasswordRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T03:08:26.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:18:10.866Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "CreateEventWithBannerDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\CreateEventWithBannerDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\CreateEventWithBannerDto.cs",
               "RelativeDocumentMoniker": "DTOs\\CreateEventWithBannerDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\CreateEventWithBannerDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\CreateEventWithBannerDto.cs",
               "RelativeToolTip": "DTOs\\CreateEventWithBannerDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T00:11:09.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:18:08.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\EventDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\EventDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\EventDto.cs",
-              "RelativeToolTip": "DTOs\\EventDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "ResetPasswordRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\ResetPasswordRequestDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ResetPasswordRequestDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\ResetPasswordRequestDto.cs",
+              "RelativeToolTip": "DTOs\\ResetPasswordRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T22:59:19.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TicketsController.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\TicketsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\TicketsController.cs",
-              "RelativeToolTip": "Controllers\\TicketsController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T15:08:33.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:08:17.606Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIAwwCQAAAAiAAAAAAAAAA==",
+              "Title": "EventDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\EventDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\EventDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\EventDto.cs",
+              "RelativeToolTip": "DTOs\\EventDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T15:06:52.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T17:06:31.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Models\\Ticket.cs",
-              "RelativeDocumentMoniker": "Models\\Ticket.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Models\\Ticket.cs",
-              "RelativeToolTip": "Models\\Ticket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:52:05.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:27:39.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Evento.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Models\\Evento.cs",
-              "RelativeDocumentMoniker": "Models\\Evento.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Models\\Evento.cs",
-              "RelativeToolTip": "Models\\Evento.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAIwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:26:53.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Venta.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Models\\Venta.cs",
-              "RelativeDocumentMoniker": "Models\\Venta.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Models\\Venta.cs",
-              "RelativeToolTip": "Models\\Venta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:26:47.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "Controllers\\EventsController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:26:40.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ValoresNumericosAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\ValoresNumericosAttribute.cs",
-              "RelativeDocumentMoniker": "Atributes\\ValoresNumericosAttribute.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Atributes\\ValoresNumericosAttribute.cs",
-              "RelativeToolTip": "Atributes\\ValoresNumericosAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:02:20.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Enums\\UserRole.cs",
-              "RelativeDocumentMoniker": "Enums\\UserRole.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Enums\\UserRole.cs",
-              "RelativeToolTip": "Enums\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:02:39.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UpdateRoleDto.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\UpdateRoleDto.cs",
-              "RelativeDocumentMoniker": "DTOs\\UpdateRoleDto.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\DTOs\\UpdateRoleDto.cs",
-              "RelativeToolTip": "DTOs\\UpdateRoleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:01:53.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAIwLUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T20:00:42.865Z",
-              "EditorCaption": ""
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-22T17:05:05.256Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAMwDIAAAANAAAAAAAAAA==",
+              "Title": "FutureDateAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Atributes\\FutureDateAttribute.cs",
+              "RelativeDocumentMoniker": "Atributes\\FutureDateAttribute.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Atributes\\FutureDateAttribute.cs",
+              "RelativeToolTip": "Atributes\\FutureDateAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T17:19:25.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T22:14:20.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DateOnlyJsonConverter.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Utils\\DateOnlyJsonConverter.cs",
+              "RelativeDocumentMoniker": "Utils\\DateOnlyJsonConverter.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Utils\\DateOnlyJsonConverter.cs",
+              "RelativeToolTip": "Utils\\DateOnlyJsonConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T22:11:07.865Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwD4AAAAuAAAAAAAAAA==",
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UpdateUserDto.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\DTOs\\UpdateUserDto.cs",
+              "RelativeToolTip": "DTOs\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T17:18:54.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T21:58:39.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Api entradas.csproj",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj",
-              "RelativeDocumentMoniker": "Api entradas.csproj",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj",
-              "RelativeToolTip": "Api entradas.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-10T21:26:10.211Z",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:57:01.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "Controllers\\TicketsController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:44:03.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAcwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:43:12.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-10T21:26:05.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "libman.json",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\libman.json",
-              "RelativeDocumentMoniker": "libman.json",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\libman.json",
-              "RelativeToolTip": "libman.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-10T21:26:03.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-06-10T21:26:02.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\exeee\\Desktop\\api\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\exeee\\Desktop\\api\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAHUAAAACAAAAAAAAAA==",
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAYwEcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T21:25:55.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T21:35:39.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:35:34.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:34:45.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Venta.cs",
+              "RelativeToolTip": "Models\\Venta.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:29:10.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Evento.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Evento.cs",
+              "RelativeDocumentMoniker": "Models\\Evento.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Evento.cs",
+              "RelativeToolTip": "Models\\Evento.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB4AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:29:07.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:29:04.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T21:28:42.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T17:19:25.931Z"
             }
           ]
         }

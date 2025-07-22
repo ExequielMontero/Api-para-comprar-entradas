@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj": {}
+    "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Api entradas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj": {
+    "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Api entradas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj",
+        "projectUniqueName": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Api entradas.csproj",
         "projectName": "Api entradas",
-        "projectPath": "C:\\Users\\exeee\\Desktop\\api\\Api entradas.csproj",
+        "projectPath": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\Api entradas.csproj",
         "packagesPath": "C:\\Users\\exeee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\exeee\\Desktop\\api\\obj\\",
+        "outputPath": "C:\\Users\\exeee\\OneDrive\\Escritorio\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -92,6 +92,14 @@
               "target": "Package",
               "version": "[9.0.5, )"
             },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "QRCoder": {
               "target": "Package",
               "version": "[1.6.0, )"
@@ -103,6 +111,10 @@
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.8.37, )"
+            },
+            "Supabase": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

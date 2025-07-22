@@ -12,9 +12,8 @@ namespace Api_entradas.Models
         public string Email { get; set; } = null!;
         public string PasswordHash { get; set; } = null!;
         public UserRole Role { get; set; }
-        public DateTime? FechaNacimiento { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public bool EstaVerificado { get; set; } = false;
-
         public ICollection<Venta> UserEvents { get; set; } = new List<Venta>();
 
     }

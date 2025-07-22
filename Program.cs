@@ -17,28 +17,24 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.FileProviders;
 using Api_entradas.Utils;
 using Microsoft.Extensions.Options;
+using System.Configuration;
+using Supabase;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-
-
 // Cloudinary
-
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("Cloudinary"));
 builder.Services.AddSingleton<CloudinaryService>(sp =>
 {
     var options = sp.GetRequiredService<IOptions<CloudinarySettings>>();
     var settings = options.Value;
-
-    // TEMPORAL: imprime valores para verificar
-    Console.WriteLine("CLOUDINARY CONFIG:");
-    Console.WriteLine($"CloudName: {settings.CloudName}, ApiKey: {settings.ApiKey}, ApiSecret: {settings.ApiSecret}");
-
     return new CloudinaryService(settings);
 });
 // Configurar MercadoPago
 MercadoPagoConfig.AccessToken = builder.Configuration["Mp:AccessToken"];
+
+
 
 // Configurar Swagger con JWT Bearer
 builder.Services.AddEndpointsApiExplorer();
@@ -85,9 +81,14 @@ builder.Services.AddControllers()
     .AddNewtonsoftJson(); // Si usas Program.cs
 
 
-// EF Core – SQLite
-builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+//// EF Core – SQLite
+//builder.Services.AddDbContext<AppDbContext>(opt =>
+//    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//EF Core – Postgre
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
 // Redis como IDistributedCache
 builder.Services.AddSingleton<IConnectionMultiplexer>(

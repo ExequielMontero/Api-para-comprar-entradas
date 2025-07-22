@@ -68,8 +68,18 @@ namespace Api_entradas.Controllers
             if (user == null) return Unauthorized("Credenciales inválidas.");
 
             var token = await _auth.GenerateTokenAsync(user);
-            return Ok(new { token });
+
+            var userInfo = new
+            {
+                id = user.Id,
+                email = user.Email,
+                username = user.User,
+                role = user.Role
+            };
+
+            return Ok(new { token, user = userInfo });
         }
+        
 
 
 

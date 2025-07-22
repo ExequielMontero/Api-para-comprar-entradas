@@ -5,6 +5,7 @@
 *.user
 *.suo
 *.backup
+.env
 
 # Binarios y dependencias
 bin/
@@ -13,13 +14,58 @@ obj/
 *.pdb
 *.exe
 packages/
+node_modules/
+wwwroot/lib/
 
 # Logs y temporales
 *.log
 *.log.*
 *.tmp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Bases de datos y publicaciones
+# Bases de datos
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+app.db
 *.mdf
 *.ldf
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.local.json
+*.Development.json
+
+# Archivos de publicación y despliegue
 Publish/
+[Pp]ublish/
+[Dd]eploy/
+*.publish.xml
+
+# Archivos de caché y temporales
+.vs/
+**/[Cc]ache/
+*.[Cc]ache
+*.cache
+[Tt]emp/
+[Tt]mp/
+
+# Archivos específicos de Docker
+.docker/
+docker-compose.override.yml
+*.env
+
+# Archivos de cobertura y pruebas
+coverage/
+TestResults/
+[Tt]est[Rr]esult*/
+*.coverage
+*.coveragexml
+
+# Otros
+.DS_Store
+Thumbs.db

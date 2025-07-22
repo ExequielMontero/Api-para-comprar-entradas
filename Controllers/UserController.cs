@@ -37,7 +37,16 @@ namespace Api_entradas.Controllers
 
             try
             {
-                var users = await _context.User.ToListAsync();
+                var users = await _context.User
+                    .Select(u => new {
+                        u.Id,
+                        u.User,
+                        u.Email,
+                        u.Role,
+                        FechaNacimiento = u.FechaNacimiento.ToString("yyyy-MM-dd"),
+                        u.EstaVerificado
+                    })
+                    .ToListAsync();
                 return Ok(users);
             }
             catch (Exception ex)
@@ -58,7 +67,16 @@ namespace Api_entradas.Controllers
         {
             try
             {
-                var usuario = await _context.User.FirstAsync(x => x.User == user);
+                var usuario = await _context.User
+                    .Select(u => new {
+                        u.Id,
+                        u.User,
+                        u.Email,
+                        u.Role,
+                        FechaNacimiento = u.FechaNacimiento.ToString("yyyy-MM-dd"),
+                        u.EstaVerificado
+                    })
+                    .FirstAsync(x => x.User == user);
                 if (usuario == null) return NotFound(new { mensaje = "Usuario no encontrado" });
                 return Ok(usuario);
             }

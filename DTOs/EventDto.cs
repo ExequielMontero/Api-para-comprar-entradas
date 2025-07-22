@@ -1,5 +1,6 @@
 ﻿using Api_entradas.Atributes;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Api_entradas.DTOs
 {
@@ -18,5 +19,10 @@ namespace Api_entradas.DTOs
 
         [Range(0, double.MaxValue, ErrorMessage = "El precio debe ser mayor o igual a 0.")]
         public double Price { get; set; }
+
+
     }
-}
+
+
+
+    }

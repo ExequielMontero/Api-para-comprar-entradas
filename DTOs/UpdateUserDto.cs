@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using Api_entradas.Atributes;
 
 public class UpdateUserDto
@@ -16,7 +17,8 @@ public class UpdateUserDto
 
     [DateValidation(ErrorMessage = "La fecha debe tener el formato yyyy-mm-d y debe ser pasada")]
     [DefaultValue("")]
-    public DateTime? FechaNacimiento { get; set; } = null;
+
+    public DateTime FechaNacimiento { get; set; }
 
 
 

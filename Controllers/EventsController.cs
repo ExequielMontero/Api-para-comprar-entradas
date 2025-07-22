@@ -43,7 +43,7 @@ namespace Api_entradas.Controllers
             {
                 Title = dto.Title,
                 BannerEvento = url,
-                Date = dto.Date,
+                Date = DateTime.SpecifyKind(dto.Date, DateTimeKind.Utc),
                 TotalTickets = dto.TotalTickets,
                 Price = dto.Price,
                 TicketsSold = 0
@@ -52,7 +52,17 @@ namespace Api_entradas.Controllers
             _db.Events.Add(ev);
             await _db.SaveChangesAsync();
 
-            return CreatedAtAction(null, new { ev.Id }, ev);
+            var eventResponse = new {
+                ev.Id,
+                ev.Title,
+                Date = ev.Date.ToString("yyyy-MM-dd"),
+                ev.TotalTickets,
+                ev.TicketsSold,
+                IsSoldOut = ev.TicketsSold >= ev.TotalTickets,
+                ev.BannerEvento
+            };
+
+            return CreatedAtAction(nameof(GetAll), new { ev.Id }, eventResponse);
         }
 
 
@@ -80,7 +90,7 @@ namespace Api_entradas.Controllers
                 .Select(e => new {
                     e.Id,
                     e.Title,
-                    e.Date,
+                    Date = e.Date.Date.ToString("yyyy-MM-dd"),
                     e.TotalTickets,
                     e.TicketsSold,
                     IsSoldOut = e.TicketsSold >= e.TotalTickets,

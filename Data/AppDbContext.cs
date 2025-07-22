@@ -32,7 +32,23 @@ namespace Api_entradas.Data
             modelBuilder.Entity<Usuario>()
           .HasIndex(u => u.Email)
            .IsUnique();
+
+            modelBuilder.Entity<Usuario>(builder =>
+            {
+                 builder
+                .Property(u => u.Id)
+                .HasColumnType("uuid");  // Para PostgreSQL (opcional, incluso podés no poner nada)
+                builder
+                .Property(u => u.EstaVerificado)
+                .HasConversion(
+                    v => v ? 1 : 0,    // de bool a int
+                    v => v == 1        // de int a bool
+                )
+                .HasColumnType("integer");
+
+            });
         }
+
 
         public DbSet<Usuario> User { get; set; }
         public DbSet<Evento> Events { get; set; }
